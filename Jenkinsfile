@@ -11,5 +11,11 @@ pipeline {
                 sh 'mvn test'
             }
         }
+
+        stage ('Deploy Backend') {
+            steps {
+                deploy adapters: [tomcat8(credentialsId: 'TomcatLogin', path: '', url: 'http://localhost:8002/')], contextPath: 'asks-backend', war: 'target/tasks-backend.war'
+            }
+        }
     }
 }
