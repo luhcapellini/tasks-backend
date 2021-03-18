@@ -43,7 +43,7 @@ public class TaskControllerTest {
     public void naoDeveSalvarTarefaSemData() {
         Task todo = new Task();
         todo.setTask("Descrição");
-        todo.setDueDate(LocalDate.now());
+        
 
         try {
             controller.save(todo);
