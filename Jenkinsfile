@@ -46,7 +46,7 @@ pipeline {
             }
         }
     }
-    post {
-        junit allowEmptyResults: true, testResults: '/target/surefire-reports/*.xml, functional-test/target/surefire-reports/*.xml, functional-test/target/failsafe-reports/*.xml'
-    }
+    // post {
+    //     junit allowEmptyResults: true, testResults: '/target/surefire-reports/*.xml, functional-test/target/surefire-reports/*.xml, functional-test/target/failsafe-reports/*.xml'
+    // }
 }
